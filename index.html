@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Mask</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js" integrity="sha256-tp8VZ4Y9dg702r7D6ynzSavKSwB9zjariSZ4Snurvmw=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="text">
+        Welcome Here
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(document).mousemove(function(){
+                var cursorX = p.pageX;
+                var cursorY = p.pageY;
+                var transX = ((7 * cursorX) / 570) +40;
+                var transY = ((7 * cursorY) / 570) +50;
+                $('.text').css({
+                    "background-position": transX + "%" + transY + "%"
+                })
+
+
+            })
+        })
+    </script>
+    
+</body>
+</html>
